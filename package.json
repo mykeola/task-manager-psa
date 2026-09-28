@@ -1,0 +1,33 @@
+{
+  "name": "task-manager-psa",
+  "version": "1.0.0",
+  "description": "AI-Powered Schedule Prediction Task Manager (PSA)",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "preprocess": "node scripts/preprocess.js",
+    "train": "node scripts/train-model.js",
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "seed": "node server/seeds/seed.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test:security": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/security.test.js --runInBand"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

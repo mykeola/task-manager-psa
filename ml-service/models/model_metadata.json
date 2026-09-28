@@ -1,0 +1,41 @@
+{
+  "winning_model": "DecisionTreeRegressor",
+  "features": [
+    "TeamExp",
+    "ManagerExp",
+    "Transactions",
+    "Entities",
+    "PointsAdjust",
+    "Envergure",
+    "Language_1",
+    "Language_2",
+    "Language_3"
+  ],
+  "results": {
+    "LinearRegression": {
+      "MAE": 1836.6524491739347,
+      "RMSE": 2652.3802984564177,
+      "R2": 0.4486043435238928,
+      "MdMRE": 0.525084260323395,
+      "PRED25": 23.52941176470588
+    },
+    "DecisionTreeRegressor": {
+      "MAE": 1360.2613190730835,
+      "RMSE": 1898.0306262664878,
+      "R2": 0.7176432426903495,
+      "MdMRE": 0.30795578390160355,
+      "PRED25": 47.05882352941176
+    },
+    "RandomForestRegressor": {
+      "MAE": 1776.1387615724946,
+      "RMSE": 2322.1506160664376,
+      "R2": 0.5773581255672076,
+      "MdMRE": 0.3776975492786635,
+      "PRED25": 35.294117647058826
+    }
+  },
+  "dataset": "Desharnais PROMISE Software Repository (N=81)",
+  "target": "Effort (Person-Hours)",
+  "test_size": 0.2,
+  "random_state": 42
+}
